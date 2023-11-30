@@ -22,7 +22,7 @@ class Router {
         $uri = $_SERVER['REQUEST_URI'];
         $action = $this->routes[$method][$uri] ?? null;
         if(is_null($action)) {
-
+            throw new HttpNotFoundException();
         }
         return $action;
     }

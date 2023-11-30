@@ -1,5 +1,5 @@
 <?php
 
-class HttpNotFoundException{
+class HttpNotFoundException extends Exception{
     
 }
