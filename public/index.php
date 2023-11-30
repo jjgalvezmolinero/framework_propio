@@ -1,5 +1,9 @@
 <?php
-require './Router.php';
+require_once '../vendor/autoload.php';
+
+use Course\HttpNotFoundException;
+use Course\Router;
+
 $router = new Router();
 
 $router->get('/test', function() {
@@ -8,6 +12,15 @@ $router->get('/test', function() {
 
 $router->post('/test', function() {
     return "POST-Hola que tal";
+});
+$router->put('/test', function () {
+    return "PUT OK";
+});
+$router->patch('/test', function () {
+    return "PATCH OK";
+});
+$router->delete('/test', function () {
+    return "DELETE OK";
 });
 
 try {
