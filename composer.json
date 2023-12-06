@@ -8,11 +8,21 @@
             "Course\\": "src/Course/"
         }
     },
+    "autoload-dev": {
+        "psr-4": {
+            "Course\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "phpunit --color=always --testdox tests"
+    },
     "authors": [
         {
             "name": "Juan José Gálvez Molinero",
             "email": "juanjosegalvezmolinero@hotmail.com"
         }
     ],
-    "require": {}
+    "require-dev": {
+        "phpunit/phpunit": "^10.4"
+    }
 }

@@ -24,7 +24,9 @@ $router->delete('/test', function () {
 });
 
 try {
-    $action = $router->resolve();
+    $method = $_SERVER['REQUEST_METHOD'];
+    $uri = $_SERVER['REQUEST_URI'];
+    $action = $router->resolve($uri, $method);
     print($action());
 } catch(HttpNotFoundException $e) {
     print("Not found");
